@@ -1,7 +1,8 @@
-.conatiner {
+.container {
   display: flex;
   flex-direction: column;
   height: 100vh;
+  background-image: url("../images/wall.png");
 }
 
 .menu {
@@ -12,24 +13,86 @@
   width: 100%;
   color: #ffffff;
   background-color: #000000;
+  border-bottom: 5px solid #ffd700;
 }
 
-.panel{
+.menu-lives {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.panel {
   margin-top: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.square{
+.square {
   border: 1px solid #000000;
   height: 150px;
   width: 150px;
-  background-color: #7fffd4;
+  background-color: #1aeaa5;
 }
 
-.enemy{
+.enemy {
   background-image: url("/src/images/ralph.png");
   background-size: cover;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+.explode {
+  transform: scale(2); /* Aumenta o tamanho do inimigo para simular explosão */
+  opacity: 0; /* Desaparece gradualmente */
+}
 
+.menu-time h2:nth-child(2),
+.menu-score h2:nth-child(2) {
+  margin-top: 1rem;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+  font-family: "Press Start 2P", cursive;
+}
+
+.modal-content h2 {
+  color: red;
+}
+
+.modal-content p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.modal-content #retry-button {
+  font-family: "Press Start 2P", cursive;
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 18px;
+  width: 100%;
+  text-align: center;
+}
+
+.modal-content #retry-button:hover {
+  background-color: darkred;
+}

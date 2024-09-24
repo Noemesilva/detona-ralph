@@ -13,7 +13,6 @@
       href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
       rel="stylesheet"
     />
-
     <!-- Styles -->
     <link rel="stylesheet" href="src/styles/reset.css" />
     <link rel="stylesheet" href="src/styles/main.css" />
@@ -23,19 +22,18 @@
       <div class="menu">
         <div class="menu-time"> 
           <h2 style="color: red;">Time Left</h2>
-          <h2>0</h2>
+          <h2 id="time-left">0</h2>
         </div>
         <div class="menu-score">
           <h2 style="color: red;">Your Score</h2>
-          <h2>0</h2>
+          <h2 id="score">0</h2>
         </div>
         <div class="menu-lives">
-          <img src="" alt="">
+          <img src="./src/images/player.png" alt="Foto do Jogador" height="80px">
           <h2>x3</h2>
         </div>
       </div>
-    </div>
-
+    
     <div class="panel">
       <div class="panel-row">
         <div class="square enemy" id="1"></div>
@@ -54,8 +52,14 @@
         <div class="square" id="8"></div>
         <div class="square" id="9"></div>
       </div>
+    </div>
 
-      
+    <div id="game-over-modal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <h2>Game Over</h2>
+        <p>O seu resultado foi: <span id="final-score">0</span></p>
+        <button id="retry-button">Tentar Novamente</button>
+      </div>
     </div>
 
     <script defer src="src/scripts/engine.js"></script>
